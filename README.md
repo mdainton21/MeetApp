@@ -27,4 +27,4 @@
 
 * Scenario: Given the user is looking at a list of events; When they click the more details function; Then the app should return charts/graphs that visualize the data in an appealing way.
 
-The MeetApp is a webapp letting you view upcoming events in cities of your choosing wherever and whenever you need to.
+The MeetApp is a webapp letting you view upcoming events in cities of your choosing wherever and whenever you need to. The app will use serverless functions for features such as event recommendations, user authentication, and app security.
