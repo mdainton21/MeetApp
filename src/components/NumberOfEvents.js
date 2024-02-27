@@ -16,6 +16,7 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
         className="textboxNumber"
         value={query}
         onChange={handleInputChanged}
+        data-testid="numberOfEventsInput"
       />
     </div>
   );
