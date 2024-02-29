@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 
 const NumberOfEvents = ({ setCurrentNOE }) => {
 
@@ -12,11 +12,11 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
   return (
     <div id="number-of-events">
       <input
+        data-testid="numberOfEventsInput"
         type="text"
         className="textboxNumber"
         value={query}
         onChange={handleInputChanged}
-        data-testid="numberOfEventsInput"
       />
     </div>
   );

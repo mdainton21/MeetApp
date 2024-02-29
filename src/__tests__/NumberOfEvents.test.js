@@ -1,6 +1,6 @@
+import NumberOfEvents from "../components/NumberOfEvents";
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import NumberOfEvents from "../components/NumberOfEvents";
 
 const mockConsoleMethod = (realConsoleMethod) => {
   const ignoredMessages = [
@@ -22,12 +22,15 @@ console.error = jest.fn(mockConsoleMethod(console.error))
 describe('<NumberOfEvents /> component', () => {
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => { }} />);
+    NumberOfEventsComponent = render(
+    <NumberOfEvents setCurrentNOE={() => { }} setErrorAlert={() => {}}/>
+    )
   })
 
   test("contains element with role 'textbox'", () => {
     const numberTextBox = NumberOfEventsComponent.queryByRole('textbox');
     expect(numberTextBox).toBeInTheDocument();
+    expect(numberTextBox).toHaveClass('textboxNumber')
   });
 
   test('32 events are rendered as default', () => {
